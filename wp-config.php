@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'ddi_v2');
+define('DB_NAME', 'ddi_db');
 
 /** MySQL database username */
 define('DB_USER', 'root');
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Z^wajrZ7$?:AB9{JA&$%ARF/LU`P(D_Z3}HBadZ.PjX0(31$M4KQn OzNM=(]QHB');
-define('SECURE_AUTH_KEY',  'YVJ[>gK?t}Z*Iu=:XrN+c@j8<od{#>D,ntjOD)P(i9T&~7ARz1H7Rqfml] :dA,4');
-define('LOGGED_IN_KEY',    ':laM=o$]m %+P7g_CkW_hm`730wAVIJ7OVgfR%-zucTQ<[~-2T$WO$]H[F~!y0Ht');
-define('NONCE_KEY',        '@1.v~9nsA~H |6QiA(b4mD^uUWh&N{kij&B[[^.7ut6~h1I+)/o&rrIXgiT)&dHy');
-define('AUTH_SALT',        'DLX|<Gn?.l2yc11#<^KdNrPL}Yb_D*h~w!)/^DG]B<fH7ACA_=-7@e=kb0F zUzG');
-define('SECURE_AUTH_SALT', 'hVaYY^^^[h8c9_Qt3R(Q06937Eq!rQ}cD/~QhVb!h`nBmW@L7*y?%)P3[6CGxs})');
-define('LOGGED_IN_SALT',   'A$WAN:<ivJy^Q:pN`P;AJ-;LwI(Pv9Og)I=n2D[6@[nEy~OA^4QcLcKdW&4%3(,K');
-define('NONCE_SALT',       ',zYoBB0L/ZaB,|13k*(ch|A?A7i/Ip>2@$&&]1Y6W+2c!y${#K }{kTZA9T~H)+L');
+define('AUTH_KEY',         '^BRwseQsi};B@BkRz]nse3zp>x<pvxKE88!kN)!C!80Uo7C#B4M8 aJV++A=K$3N');
+define('SECURE_AUTH_KEY',  '-ezj$Bii1O|9?v$Upe$vuTbvkbRD7){LWIK&#txwg!re1K0|a8d?&STj=Hj3[b1Q');
+define('LOGGED_IN_KEY',    'dpD/Ea,yfat#MVHlE3!0h81Qdg-cw!taXTe+%+2XP-,_P#Aw)%^wX]oVs%_EsP^]');
+define('NONCE_KEY',        ']f5s3ogw7VB<Q~jT[H|,`*S^[>eAIocZp:6D,3JQNTq9y:kI/!P4j0oso ^M<8zE');
+define('AUTH_SALT',        '~f; =(jnpKbwMk8N&ve`K6f|3o+-m)d+1Es$.V]]L:Mv]=!q55{+T[+0I:j4|`]g');
+define('SECURE_AUTH_SALT', '_a5g=_ycmCD/hb$S0d#O](~zQj,E)N=DXbh{Uw{~**`%$RJLyQ>N!{nrs*)Z9xWw');
+define('LOGGED_IN_SALT',   '$X9OX37wcF,e|SS$~dqmOxOYG{0~|WlpIz&Tld~Aa$S~shD)}C2w7QjZGLAVlYI}');
+define('NONCE_SALT',       'rGU+BylW=A#-V,tKCYdl/>_|b9lskkS2HVDKf?%L/x{lTG,]#$~r!uy6,GlUu:9^');
 
 /**#@-*/
 
@@ -77,7 +77,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
