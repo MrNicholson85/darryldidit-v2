@@ -1,5 +1,5 @@
 
-<header class="banner" style="background-image: url('<?= get_field('hero_partial_image'); ?>');">
+<header class="banner homepage-hero">
   <div class="container">
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))
