@@ -1,0 +1,54 @@
+.hero {
+  height: 350px;
+  position: relative;
+  width: 100%;
+  transform: translateY(-11.4%);
+  z-index: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 25px solid $orange;
+    border-right: 425px solid transparent;
+    bottom: -25px;
+
+    @include media-breakpoint-up(sm) {
+      border-top: 44px solid $orange;
+      border-right: 768px solid transparent;
+      bottom: -44px;
+    }
+
+    @include media-breakpoint-up(md) {
+      border-right: 768px solid transparent;
+    }
+
+    @include media-breakpoint-up(lg) {
+      border-right: 1024px solid transparent;
+    }
+
+    @include media-breakpoint-up(xl) {
+      border-right: 1440px solid transparent;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 550px;
+    transform: translateY(-7.2%);
+  }
+
+  &__title {
+    color: white;
+  }
+
+  &__sub-title {
+    color: $orange;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

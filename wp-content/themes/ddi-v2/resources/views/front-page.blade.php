@@ -8,6 +8,4 @@
   @while(have_posts()) @php the_post() @endphp
     @include('partials.hero')
   @endwhile
-
-  <div class="">Hello Darryl !</div>
 @endsection
