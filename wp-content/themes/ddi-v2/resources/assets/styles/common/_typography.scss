@@ -1,0 +1,31 @@
+.h1,
+h1 {
+  font-size: 32px;
+  line-height: 30px;
+  font-family: 'ChunkFive', sans-serif;
+  font-weight: bold;
+
+  @include media-breakpoint-up (md) {
+    font-size: 72px;
+    line-height: 80px;
+  }
+}
+
+.h2,
+h2 {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 22px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+  }
+}
+
+a {
+  color: $white;
+  font-family: 'RobotoSlab', sans-serif;
+
+  &:hover {
+    color: $orange;
+  }
+}

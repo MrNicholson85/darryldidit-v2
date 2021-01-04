@@ -1,5 +1,5 @@
 
-<header class="banner homepage-hero">
+<header class="banner navbar fixed-top">
   <div class="container">
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))
