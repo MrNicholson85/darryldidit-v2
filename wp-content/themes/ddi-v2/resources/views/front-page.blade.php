@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.hero')
-    @include('partials.skills')
+    @include('partials.modules.hero')
+    @include('partials.modules.skills')
   @endwhile
 @endsection

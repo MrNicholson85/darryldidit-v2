@@ -1,0 +1,71 @@
+
+.skills {
+  &__skill-level {
+    height: 15px;
+    width: 100%;
+    background-color: theme-color('dark_gray');
+  }
+
+  &__items {
+    margin-bottom: 13px;
+  }
+
+  &__skill-title {
+    margin-bottom: 3px;
+  }
+
+  &__progress {
+    height: 15px;
+    background-color: $orange;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__progress-display {
+    position: absolute;
+    right: 0;
+    transform: translateY(-19px);
+    font-size: 12px;
+    color: $orange;
+  }
+
+  &__progress-1 {
+    width: 10%;
+  }
+
+  &__progress-2 {
+    width: 20%;
+  }
+
+  &__progress-3 {
+    width: 30%;
+  }
+
+  &__progress-4 {
+    width: 40%;
+  }
+
+  &__progress-5 {
+    width: 50%;
+  }
+
+  &__progress-6 {
+    width: 60%;
+  }
+
+  &__progress-7 {
+    width: 70%;
+  }
+
+  &__progress-8 {
+    width: 80%;
+  }
+
+  &__progress-9 {
+    width: 90%;
+  }
+
+  &__progress-10 {
+    width: 100%;
+  }
+}
