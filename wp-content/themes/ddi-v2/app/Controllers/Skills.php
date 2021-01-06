@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class Hero extends Controller
+class Skills extends Controller
 { 
-    protected $acf = true;
+
 }
