@@ -1,13 +1,13 @@
 <section class="page-section skills">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="h2">
           {!! $title !!}
         </div>
         {!! $description !!}
       </div>
-      <div class="col-md-9">
+      <div class="col-md-8">
         <div class="h2">
           {!! $skill_title !!}
         </div>

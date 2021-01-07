@@ -1,16 +1,16 @@
-@include font-face('ChunkFive', '../fonts/chunkfive-ddi', $file-formats: eot ttf woff2 woff);
-@include font-face('RobotoSlab', '../fonts/RobotoSlab-Regular-webfont', $file-formats: eot ttf svg woff);
+// @include font-face('ChunkFive', '../fonts/chunkfive-ddi', $file-formats: eot ttf woff2 woff);
+// @include font-face('RobotoSlab', '../fonts/RobotoSlab-Regular-webfont', $file-formats: eot ttf svg woff);
 
-@font-face {
-  font-family: 'ChunkFive';
-  src: url('../fonts/chunkfive-ddi.woff2') font('woffs');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'ChunkFive';
+//   src: url('../fonts/chunkfive-ddi.woff2') font('woffs');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
-@font-face {
-  font-family: 'RobotoSlab';
-  src: url('../fonts/RobotoSlab-Regular-webfont.woff') font('woffs');
-  font-weight: normal;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'RobotoSlab';
+//   src: url('../fonts/RobotoSlab-Regular-webfont.woff') font('woffs');
+//   font-weight: normal;
+//   font-style: normal;
+// }
