@@ -1,10 +1,16 @@
 <?php
 
-namespace App\Controllers;
+namespace App;
 
-use Sober\Controller\Controller;
+    function skills( $data ) {
 
-class Skills extends Controller
-{ 
+        $skills = get_field('skill_list');
 
-}
+        if ( $skills ) {
+            $data['skill_name'] = 'skill_name';
+            $data['skill_level'] = 'skill_level';
+        }
+
+        return $data;
+    }
+    add_filter( 'sage/template/page/data', 'App\\skills' );

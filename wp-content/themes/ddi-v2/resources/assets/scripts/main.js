@@ -1,6 +1,5 @@
 // import external dependencies
 import 'jquery';
-import 'bootstrap/dist/js/bootstrap';
 import 'slick-carousel/slick/slick';
 
 // Import everything from autoload

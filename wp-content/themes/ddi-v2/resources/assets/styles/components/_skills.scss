@@ -6,6 +6,14 @@
     background-color: theme-color('dark_gray');
   }
 
+  &__content {
+    margin-top: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+  }
+
   &__items {
     margin-bottom: 13px;
   }

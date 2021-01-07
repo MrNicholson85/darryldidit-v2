@@ -2,13 +2,11 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <ul class="quote__list">
+        <ul class="quotes__list">
           @forelse($quotes as $q)
-              <li class="quout_items">
-                <div class="card-block">
-                  <h4 class="card-title text-center">{{$q->message}}</h4>
-                  <h4 class="card-title text-center">{{$q->quoter}}</h4>
-                </div>
+              <li class="quotes__items">
+                <div class="quotes__item-message">{{$q->message}}</div>
+                <span class="quotes__item-quoter">- {{$q->quoter}} -</span>
               </li>
             @empty
               <li class="alert alert-danger">No Images</li>

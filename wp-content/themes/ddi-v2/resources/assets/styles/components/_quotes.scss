@@ -1,0 +1,40 @@
+.quotes {
+  background-color: $orange;
+
+  &__list {
+    padding-inline-start: 0 !important;
+  }
+
+  &__items {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 0 10px;
+
+    @include media-breakpoint-up(md) {
+      padding: 0 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 100px;
+    }
+  }
+
+  &__item-message {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    padding-bottom: 80px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+  }
+
+  &__item-quoter {
+    text-align: left !important;
+    width: 100%;
+    font-weight: bold;
+  }
+}

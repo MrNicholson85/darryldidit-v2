@@ -5,20 +5,26 @@ export default {
     $(document).ready(function(){
       $(window).scroll(function(){
         var scroll = $(window).scrollTop();
-        if (scroll > 300) {
+        if (scroll > 100) {
           $(".banner").css("background" , "white");
+          $(".banner").css("border-bottom", "rgb(226, 226, 226) solid 1px");
           $(".nav a").css("color", "orange");
         } else {
           $(".banner").css("background" , "transparent");
+          $(".banner").css("border-bottom", "transparent");
           $(".nav a").css("color", "white");
         }
       });
     });
 
-    $('.quote__list').slick({
+    $('.quotes__list').slick({
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      arrows: false,
+      adaptiveHeight: true,
     });
   },
   finalize() {

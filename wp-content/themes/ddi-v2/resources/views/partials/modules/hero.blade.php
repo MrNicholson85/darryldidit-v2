@@ -1,4 +1,4 @@
-<div class="hero"  style="background-image: url('{{$hero_image}}');">
+<div class="page-section hero"  style="background-image: url('{{$hero_image}}');">
   <div class="container">
     <div class="row">
       <div class="hero__content">
