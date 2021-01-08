@@ -174,4 +174,9 @@ add_action( 'init', function() {
         'show_ui' => true,
     ));
 
+    $portfolio_cpt->add_taxonomy('tag', array(
+        'hierarchical' => false,
+        'show_ui' => true,
+    ));
+
 } );
