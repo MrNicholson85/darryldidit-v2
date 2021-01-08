@@ -1,5 +1,5 @@
 <footer class="content-info">
   <div class="container">
-    @php dynamic_sidebar('sidebar-footer') @endphp
+    <div class="content-info__copy">&copy {{ date('Y') }} Darryl Did It. All Rights Reserved.</div>
   </div>
 </footer>
