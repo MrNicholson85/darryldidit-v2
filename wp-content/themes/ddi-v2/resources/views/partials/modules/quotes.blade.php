@@ -3,13 +3,13 @@
     <div class="row">
       <div class="col-sm-12">
         <ul class="quotes__list">
-          @forelse($quotes as $q)
+          @forelse($c->quotes as $q)
               <li class="quotes__items">
-                <div class="quotes__item-message">{{$q->message}}</div>
-                <span class="quotes__item-quoter">- {{$q->quoter}} -</span>
+                <div class="quotes__item-message">{{ $q['quotes_message'] }}</div>
+                <span class="quotes__item-quoter">- {{ $q['quoter'] }} -</span>
               </li>
             @empty
-              <li class="alert alert-danger">No Images</li>
+              <li class="alert alert-danger">No Quotes</li>
             @endforelse
         </ul>
       </div>

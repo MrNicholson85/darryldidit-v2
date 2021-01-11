@@ -7,14 +7,10 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $pagebuilder = new FieldsBuilder('pagebuilder');
 
 $pagebuilder
-    ->setLocation('post_type', '==', 'pagebuilder');
+    ->setLocation('post_type', '==', 'pagebuilder')
+    ->setLocation('post_type', '==', 'front_page');
   
 $pagebuilder
-    ->addFields(get_field_partial('partials.general'))
-        ->removeField('enable_featured_image')
-        
-    ->addFields(get_field_partial('partials.header'))
-
     ->addFields(get_field_partial('partials.builder'));
 
 return $pagebuilder;
