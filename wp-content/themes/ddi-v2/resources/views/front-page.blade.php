@@ -6,8 +6,13 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.modules.hero')
-    @include('partials.modules.skills')
-    @include('partials/modules/quotes')
+    @foreach($page_builder as $c)
+      @if ($c->block_type == 'hero')
+        @include('partials.modules.hero')
+      @endif
+      @if($c->block_type == 'content_skills')
+        @include('partials.modules.skills')
+      @endif
+    @endforeach
   @endwhile
 @endsection
