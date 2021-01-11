@@ -48,6 +48,16 @@ class Pagebuilder extends Controller
 
                 array_push($data, $this_block);
             }
+
+            if($block['acf_fc_layout']  == 'quotes')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'quotes' => $block['quotes'],
+                ];
+
+                array_push($data, $this_block);
+            }
         }
 
         $data = (object) $data;

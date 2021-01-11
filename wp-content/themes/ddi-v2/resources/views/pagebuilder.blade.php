@@ -13,6 +13,9 @@
       @if($c->block_type == 'content_skills')
         @include('partials.modules.skills')
       @endif
+      @if($c->block_type == 'quotes')
+        @include('partials.modules.quotes')
+      @endif
     @endforeach
   @endwhile
 @endsection
