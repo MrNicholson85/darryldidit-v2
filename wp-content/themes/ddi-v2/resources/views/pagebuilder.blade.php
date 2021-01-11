@@ -1,5 +1,5 @@
 {{--
-  Template Name: Front Page Template
+  Template Name: Pagebuilder Template
 --}}
 
 @extends('layouts.app')

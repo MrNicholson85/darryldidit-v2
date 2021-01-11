@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class FrontPage extends Controller
+class Pagebuilder extends Controller
 {
     protected $acf = true;
 
@@ -19,6 +19,9 @@ class FrontPage extends Controller
         // Loop through each block
         foreach ($page_builder as $block)
         {
+            /**
+             * Hero Component
+             */
             if ($block['acf_fc_layout'] == 'hero')
             {
                 // Do any logic for this component here
