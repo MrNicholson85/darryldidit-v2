@@ -58,6 +58,11 @@ class Pagebuilder extends Controller
 
                 array_push($data, $this_block);
             }
+
+            if($block['acf_fc_layout']  == 'featured_project')
+            {
+                
+            }
         }
 
         $data = (object) $data;
