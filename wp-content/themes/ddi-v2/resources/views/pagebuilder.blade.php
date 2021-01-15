@@ -15,9 +15,6 @@
       @if($c->block_type == 'quotes')
         @include('partials.modules.quotes')
       @endif
-      @if($c->block_type == 'feature_projects')
-        @include('partials.modules.projects')
-      @endif
     @endforeach
   @endwhile
 @endsection
