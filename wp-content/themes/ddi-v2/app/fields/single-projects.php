@@ -7,7 +7,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $project_single = new FieldsBuilder('project-single');
 
 $project_single
-    ->setLocation('post_type', '==', 'project')
+    ->setLocation('post_type', '==', 'projects')
     ->setGroupConfig('hide_on_screen', ['the_content'])
     ->setGroupConfig('style', 'seamless');
   

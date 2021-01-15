@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a12340b5ce4c7a0cf759cdc5c8d8e87c",
+    "content-hash": "ad566126859fdce20416dca430f239c5",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -666,26 +666,25 @@
         },
         {
             "name": "johnbillion/extended-cpts",
-            "version": "4.4.1",
+            "version": "4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnbillion/extended-cpts.git",
-                "reference": "b62d104bffbf9998a1063879565f61c289f0c6a9"
+                "reference": "da72234393818600f1eecbcb7d6e651dfeca6f75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnbillion/extended-cpts/zipball/b62d104bffbf9998a1063879565f61c289f0c6a9",
-                "reference": "b62d104bffbf9998a1063879565f61c289f0c6a9",
+                "url": "https://api.github.com/repos/johnbillion/extended-cpts/zipball/da72234393818600f1eecbcb7d6e651dfeca6f75",
+                "reference": "da72234393818600f1eecbcb7d6e651dfeca6f75",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7 | ^8"
             },
             "require-dev": {
-                "automattic/phpcs-neutron-standard": "1.5.4",
+                "automattic/phpcs-neutron-standard": "1.6.0",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "johnbillion/falsey-assertequals-detector": "^2",
-                "johnbillion/php-docs-standards": "^1",
                 "phpcompatibility/phpcompatibility-wp": "^2",
                 "phpunit/phpunit": "^6",
                 "roots/wordpress": "*",
@@ -724,7 +723,7 @@
             "homepage": "https://github.com/johnbillion/extended-cpts/",
             "support": {
                 "issues": "https://github.com/johnbillion/extended-cpts/issues",
-                "source": "https://github.com/johnbillion/extended-cpts/tree/4.4.1"
+                "source": "https://github.com/johnbillion/extended-cpts/tree/4.5.0"
             },
             "funding": [
                 {
@@ -732,7 +731,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-12-05T20:15:02+00:00"
+            "time": "2021-01-12T23:27:05+00:00"
         },
         {
             "name": "kylekatarnls/update-helper",

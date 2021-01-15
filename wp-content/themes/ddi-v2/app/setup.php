@@ -133,54 +133,55 @@ add_action('after_setup_theme', function () {
 });
 
 
-// add_action( 'init', function() {
+add_action( 'init', function() {
+	register_extended_post_type( 'projects', [
 
-// 	$portfolio_cpt = register_extended_post_type( 'project', array(
+'show_in_feed' => true,
+'menu_icon'    => 'dashicons-groups',
 
-// 		# Show all posts on the post type archive:
-// 		'archive' => array(
-// 			'nopaging' => true
-// 		),
+# Add some custom columns to the admin screen:
+		'admin_cols' => [
+			'course_dept' => [
+            'taxonomy' => 'department'
+			],
+			'projects_role' => [
+				'taxonomy' => 'projects-roles'
+		]
+		],
 
-// 		# Add some custom columns to the admin screen:
-// 		'admin_cols' => array(
-// 			'title',
-// 			'published' => array(
-// 				'title'       => 'Published',
-// 				'meta_key'    => 'published_date',
-// 				'date_format' => 'd/m/Y'
-//             ),
-//             'category',
-//             'allow_hierarchy' => true
-// 		),
+		'archive' => [
+			'nopaging' => true,
+		],
 
-// 		# Add a dropdown filter to the admin screen:
-// 		'admin_filters' => array(
-// 			'genre' => array(
-// 				'taxonomy' => 'genre'
-// 			)
-// 		)
+	], [
 
-// 	), array(
+		'singular' => 'projects',
+		'plural'   => 'projectss',
+		'slug'     => 'projectss',
 
-// 		# Override the base names used for labels:
-// 		'singular' => 'project',
-// 		'plural'   => 'Projects',
-// 		'slug'     => 'projects'
+	] );
 
-//     ) );
+	register_extended_taxonomy( 'projects-roles', 'projects', array(
 
-//     $portfolio_cpt->add_taxonomy('categorie', array(
-//         'hierarchical' => false,
-//         'show_ui' => true,
-//     ));
+		'dashboard_glance' => true,
 
-//     $portfolio_cpt->add_taxonomy('tag', array(
-//         'hierarchical' => false,
-//         'show_ui' => true,
-//     ));
+		'admin_cols' => array(
+				'updated' => array(
+						'title'       => 'Updated',
+						'meta_key'    => 'updated_date',
+						'date_format' => 'd/m/Y'
+				),
+		),
 
-// } );
+), array(
+
+		'singular' => 'Role',
+		'plural'   => 'Roles',
+		'slug'     => 'projects-roles'
+
+) );
+
+} );
 
 /**
  * Initialize ACF Builder
