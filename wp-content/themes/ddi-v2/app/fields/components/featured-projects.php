@@ -7,7 +7,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $feature_projects = new FieldsBuilder('feature_projects');
 
 $feature_projects
-    ->addPostObject('feature_projects', [
+    ->addRelationship('feature_projects', [
         'label' => 'Feature Projects',
         'post_type' => 'projects',
         'multiple' => 1,
