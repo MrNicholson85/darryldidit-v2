@@ -132,57 +132,6 @@ add_action('after_setup_theme', function () {
     });
 });
 
-
-add_action( 'init', function() {
-	register_extended_post_type( 'projects', [
-
-'show_in_feed' => true,
-'menu_icon'    => 'dashicons-groups',
-
-# Add some custom columns to the admin screen:
-		'admin_cols' => [
-			'course_dept' => [
-            'taxonomy' => 'department'
-			],
-			'projects_role' => [
-				'taxonomy' => 'projects-roles'
-		]
-		],
-
-		'archive' => [
-			'nopaging' => true,
-		],
-
-	], [
-
-		'singular' => 'projects',
-		'plural'   => 'projectss',
-		'slug'     => 'projectss',
-
-	] );
-
-	register_extended_taxonomy( 'projects-roles', 'projects', array(
-
-		'dashboard_glance' => true,
-
-		'admin_cols' => array(
-				'updated' => array(
-						'title'       => 'Updated',
-						'meta_key'    => 'updated_date',
-						'date_format' => 'd/m/Y'
-				),
-		),
-
-), array(
-
-		'singular' => 'Role',
-		'plural'   => 'Roles',
-		'slug'     => 'projects-roles'
-
-) );
-
-} );
-
 /**
  * Initialize ACF Builder
  */

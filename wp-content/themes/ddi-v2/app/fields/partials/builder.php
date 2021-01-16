@@ -12,7 +12,6 @@ $builder
             ->addLayout(get_field_partial('components.button'))
             ->addLayout(get_field_partial('components.hero'))
             ->addLayout(get_field_partial('components.content-skills'))
-            ->addLayout(get_field_partial('components.quotes'))
-            ->addLayout(get_field_partial('components.projects'));
+            ->addLayout(get_field_partial('components.quotes'));
 
 return $builder;

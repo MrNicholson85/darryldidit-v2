@@ -6,6 +6,8 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+    protected $acf = true;
+
     public function siteName()
     {
         return get_bloginfo('name');
@@ -29,5 +31,28 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    public function projectLoop()
+    {  
+        $data = [];
+        $project_items = get_posts([
+            'post_type' => 'project',
+            'posts_per_page'=>'10',
+        ]);
+        
+        foreach($project_items as $pi)
+        {
+            $post_data = [
+                'title' => get_the_title($pi),
+                'permalink' => get_the_permalink($pi),
+                'project_image' => get_field('project_image', $pi),
+                'project_decription' => get_field('project_description', $pi),
+                'Skills_loop' => get_field('project_items', $pi),
+            ];
+
+            array_push($data, (object) $post_data);
+        }
+        return $data;
     }
 }
