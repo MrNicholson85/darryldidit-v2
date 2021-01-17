@@ -1,0 +1,46 @@
+.single-project {
+  position: relative;
+
+  &__project-hero {
+    height: 300px;
+    backdrop-filter: blur(10px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: black;
+      opacity: 0.5;
+      left: 0;
+      height: 300px;
+      width: 100%;
+    }
+  }
+
+  &__hero-title {
+    text-align: center;
+    font-size: 30px;
+    height: 300px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    transform: translateY(40%);
+  }
+
+  &__skill-list {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  &__skill-item {
+    list-style: none;
+
+    &::before {
+      content: "• ";
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      color: $orange;
+      font-size: 20px;
+    }
+  }
+}
