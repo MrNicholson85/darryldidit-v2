@@ -10,11 +10,6 @@ $page
     ->setLocation('post_type', '==', 'page');
   
 $page
-    ->addFields(get_field_partial('partials.general'))
-        ->removeField('enable_featured_image')
-        
-    ->addFields(get_field_partial('partials.header'))
-
     ->addFields(get_field_partial('partials.builder'));
 
 return $page;

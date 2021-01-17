@@ -132,56 +132,6 @@ add_action('after_setup_theme', function () {
     });
 });
 
-
-add_action( 'init', function() {
-
-	$portfolio_cpt = register_extended_post_type( 'project', array(
-
-		# Show all posts on the post type archive:
-		'archive' => array(
-			'nopaging' => true
-		),
-
-		# Add some custom columns to the admin screen:
-		'admin_cols' => array(
-			'title',
-			'published' => array(
-				'title'       => 'Published',
-				'meta_key'    => 'published_date',
-				'date_format' => 'd/m/Y'
-            ),
-            'category',
-            'allow_hierarchy' => false
-		),
-
-		# Add a dropdown filter to the admin screen:
-		'admin_filters' => array(
-			'genre' => array(
-				'taxonomy' => 'genre'
-			)
-		)
-
-	), array(
-
-		# Override the base names used for labels:
-		'singular' => 'project',
-		'plural'   => 'Projects',
-		'slug'     => 'projects'
-
-    ) );
-
-    $portfolio_cpt->add_taxonomy('categorie', array(
-        'hierarchical' => false,
-        'show_ui' => true,
-    ));
-
-    $portfolio_cpt->add_taxonomy('tag', array(
-        'hierarchical' => false,
-        'show_ui' => true,
-    ));
-
-} );
-
 /**
  * Initialize ACF Builder
  */
