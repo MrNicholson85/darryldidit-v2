@@ -8,12 +8,13 @@
   <div class="container page-section projects">
     <div class="row">
         @foreach($project_loop as $project_item)
-        <div class="col-md-4">
-          <a href="{{ $project_item->permalink }}">
-            <img src="{{ $project_item->project_image['url'] }}" class="img-fluid" />
-            {{ $project_item->title }}
-          </a>
-        </div>
+          <div class="col-md-4">
+            <a class="projects__link" href="{{ $project_item->permalink }}">
+              <div class="projects__cards" style="background-image: url({{ $project_item->project_image['url'] }});">
+                <span class="projects__title">{{ $project_item->title }}</span>
+              </div>
+            </a>
+          </div>
         @endforeach
     </div>
   </div>

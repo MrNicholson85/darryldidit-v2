@@ -34,7 +34,7 @@ class App extends Controller
     }
 
     public function projectLoop()
-    {  
+    {
         $data = [];
         $project_items = get_posts([
             'post_type' => 'project',
@@ -51,8 +51,20 @@ class App extends Controller
                 'Skills_loop' => get_field('project_items', $pi),
             ];
 
-            array_push($data, (object) $post_data);
+            array_push($data, (object) $post_data,);
         }
         return $data;
+    }
+
+    public function singleProject()
+    {
+        global $post;
+
+        return(object) [
+            'project_title' => get_the_title($post),
+            'project_image' => get_field('project_image', $post) ?? null,
+            'project_content' => get_field('project_description', $post) ?? null,
+            'project_skills' => get_field('project_items', $post) ?? null
+        ];
     }
 }
