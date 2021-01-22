@@ -38,7 +38,7 @@ class App extends Controller
         $data = [];
         $project_items = get_posts([
             'post_type' => 'project',
-            'posts_per_page'=>'10',
+            'posts_per_page'=>'-1',
         ]);
         
         foreach($project_items as $pi)

@@ -58,6 +58,26 @@ class Pagebuilder extends Controller
 
                 array_push($data, $this_block);
             }
+
+            if($block['acf_fc_layout']  == 'featured_projects')
+            {
+                $project_items = get_posts([
+                    'post_type' => 'project',
+                    'posts_per_page'=>'-1',
+                ]);
+                
+                foreach($project_items as $pi)
+                {
+                    $this_block = (object) [
+                        'block_type' => $block['acf_fc_layout'] ?? null,
+                        'projects' => $project_items,
+                        'title' => get_the_title($pi),
+                        'permalink' => get_the_permalink($pi),
+                        'project_image' => get_field('project_image', $pi),
+                    ];
+                }
+                array_push($data, $this_block);
+            }
         }
 
         $data = (object) $data;
