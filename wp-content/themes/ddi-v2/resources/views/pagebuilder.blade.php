@@ -4,7 +4,6 @@
 
 @extends('layouts.app')
 @section('content')
-  @while(have_posts()) @php the_post() @endphp
     @foreach($page_builder as $c)
       @if ($c->block_type == 'hero')
         @include('partials.modules.hero')
@@ -19,5 +18,4 @@
         @include('partials.modules.featured-projects')
       @endif
     @endforeach
-  @endwhile
 @endsection

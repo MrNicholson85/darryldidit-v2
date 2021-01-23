@@ -11,6 +11,14 @@
   position: relative;
 }
 
+.section-title {
+  font-size: 55px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+
 .section-effects {
   &::before {
     content: "";

@@ -6,5 +6,5 @@ use Sober\Controller\Controller;
 
 class Project extends Controller
 { 
-
+    protected $acf = true;
 }
