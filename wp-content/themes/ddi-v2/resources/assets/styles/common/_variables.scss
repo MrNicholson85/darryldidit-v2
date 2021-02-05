@@ -1,6 +1,12 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+:root {
+  --single-page-hero-height: 300px;
+  --project-item-height: 400px;
+  --feat-project-item-height: 200px;
+}
+
 $theme-colors: (
   orange: #ee974b,
   dark_gray: #333,

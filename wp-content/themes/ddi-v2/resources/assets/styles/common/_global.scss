@@ -76,3 +76,26 @@
     }
   }
 }
+
+.btn {
+  display: grid;
+  align-items: center;
+  background-color: $orange;
+  color: var(--white);
+  transform: translateY(40px);
+
+  @include media-breakpoint-up(sm) {
+    color: var(--white);
+  }
+
+  &__primary {
+    height: 55px;
+    width: 200px;
+    margin: auto;
+  }
+
+  &:hover {
+    color: var(--white);
+    background-color: darken($orange, 10%);
+  }
+}

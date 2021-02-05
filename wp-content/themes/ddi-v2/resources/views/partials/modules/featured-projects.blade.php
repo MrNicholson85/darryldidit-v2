@@ -5,7 +5,7 @@
         <h3 class="section-title">Things I did</h3>
       </div>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
       @forelse ($project_loop as $p )
         <div class="col-md-3">
           <a class="featured-project__link" href="{{$p->permalink}}">
@@ -17,5 +17,8 @@
       @empty
       @endforelse
     </div>
+    <a class="btn btn__primary" href="{{ $c->link['url'] }}">
+      {{ $c->link['title']}}
+    </a>  
   </div>
 </div>

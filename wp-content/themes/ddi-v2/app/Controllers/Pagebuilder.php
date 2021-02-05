@@ -63,12 +63,12 @@ class Pagebuilder extends Controller
 
             if($block['acf_fc_layout']  == 'featured_projects')
             {
-                
-                    $this_block = (object) [
-                        'block_type' => $block['acf_fc_layout'] ?? null,
-                    ];
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'link' => $block['cta_button'],
+                ];
 
-                    array_push($data, $this_block);
+                array_push($data, $this_block);
             }
         }
 
