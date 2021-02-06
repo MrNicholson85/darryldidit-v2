@@ -156,7 +156,7 @@ function get_field_partial($partial)
 
 // TODO: Fix ACF Google Map Issue
 // function my_acf_google_map_api( $api ){
-//     $api['key'] = 'AIzaSyBs0OIm5ZngQuiKPku5h173jhCKentGEgY';
+//     $api['key'] = '';
 //     return $api;
 // }
 // add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
