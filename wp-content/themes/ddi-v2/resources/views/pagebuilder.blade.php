@@ -15,6 +15,7 @@
         @include('partials.modules.quotes')
       @endif
       @if($c->block_type == 'featured_projects')
+      @dump($acf_options->contact_message)
         @include('partials.modules.featured-projects')
       @endif
     @endforeach

@@ -18,10 +18,10 @@ $options
 
 $options
 ->addTab('contact_info', ['placement' => 'left'])
-    ->addText('Contact Title', [
+    ->addText('content_title', [
         'label' => 'Contact Title',
     ])
-    ->addTextarea('Contact Message', [
+    ->addTextarea('contact_message', [
         'label' => 'Contact Message'
     ])
 
