@@ -70,6 +70,21 @@ class Pagebuilder extends Controller
 
                 array_push($data, $this_block);
             }
+
+            if($block['acf_fc_layout'] == 'info_module')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'title' => $block['content_title'] ?? null,
+                    'content' => $block['contact_message'],
+                    'phone_info' => $block['phone_info'],
+                    'email_info' => $block['email_info'],
+                    'location_info' => $block['location_info'],
+                    'contact_form' => $block['contact_form_info'],
+                    'map' => $block['map_info'],
+                ];
+                array_push($data, $this_block);
+            }
         }
 
         $data = (object) $data;
