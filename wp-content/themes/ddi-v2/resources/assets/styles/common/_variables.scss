@@ -5,10 +5,19 @@
   --single-page-hero-height: 300px;
   --project-item-height: 400px;
   --feat-project-item-height: 200px;
+  --primary-orange: #fd7e14;
+  --site-dark-gray: #333;
+  --site-light-gray: rgb(155, 155, 155);
+  --site-white: #fff;
+
+  // Site Colors
+  --site-purple: #5c3d99;
+  --site-dark-purple: #301466;
+  --site-green: #38a3a5;
+  --site-light-green: #57cc99;
 }
 
 $theme-colors: (
-  orange: #ee974b,
   dark_gray: #333,
   white: #fff,
 );

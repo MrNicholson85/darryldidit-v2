@@ -41,6 +41,7 @@ class Pagebuilder extends Controller
             {
                 $this_block = (object) [
                     'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
                     'about_title' => $block['about']['title'] ?? null,
                     'about_description' => $block['about']['content_description'] ?? null,
 

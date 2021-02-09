@@ -7,6 +7,9 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $content_skills = new FieldsBuilder('content_skills');
 
 $content_skills
+  ->addTrueFalse('section_effects', [
+    'label' => 'Add section effects'
+  ])
   ->addGroup('about', [
     'label' => 'About',
     'wrapper' => [

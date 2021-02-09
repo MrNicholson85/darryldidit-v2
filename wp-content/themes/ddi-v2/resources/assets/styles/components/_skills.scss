@@ -1,9 +1,11 @@
 
 .skills {
+  background-color: var(--site-light-green);
+
   &__skill-level {
     height: 15px;
     width: 100%;
-    background-color: theme-color('dark_gray');
+    background-color: var(--site-light-green);
   }
 
   &__content {
@@ -24,7 +26,7 @@
 
   &__progress {
     height: 15px;
-    background-color: $orange;
+    background-color: var(--site-purple);
     margin-bottom: 20px;
     position: relative;
   }
@@ -34,7 +36,7 @@
     right: 0;
     transform: translateY(-19px);
     font-size: 12px;
-    color: $orange;
+    color: var(--site-dark-purple);
   }
 
   &__progress-1 {

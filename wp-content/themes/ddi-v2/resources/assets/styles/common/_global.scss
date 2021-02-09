@@ -14,9 +14,21 @@
 .section-title {
   font-size: 55px;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 100px;
   text-transform: uppercase;
+
+  &--tight {
+    margin-bottom: 20px;
+  }
+}
+
+.section-content {
+  font-size: 18px;
+  color: var(--site-white);
+}
+
+.center-text {
+  text-align: center;
 }
 
 .section-effects {

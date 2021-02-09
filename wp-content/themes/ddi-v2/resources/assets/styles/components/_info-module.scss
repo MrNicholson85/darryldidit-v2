@@ -1,3 +1,100 @@
 .info-module {
-  background-color: var(--gray);
+  background-color: var(--site-dark-purple);
+
+  &__title {
+    color: var(--site-white);
+
+    span {
+      color: var(--site-light-green);
+    }
+  }
+
+  &__content {
+    margin-bottom: 50px;
+  }
+
+  &__contact-items {
+    margin-bottom: 50px;
+  }
+
+  &__items-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: var(--site-light-green);
+  }
+
+  &__icon {
+    position: relative;
+    padding: 20px;
+    content: "";
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: var(--site-white);
+    left: 0;
+    margin-right: 20px;
+
+    .svg-inline--fa {
+      color: var(--site-light-green);
+      font-size: 30px;
+    }
+
+    &--thin {
+      padding: 20px 24px;
+    }
+  }
+
+  &__item-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__item-content {
+    color: var(--site-white);
+  }
+
+  /// Contact Form style overwrite
+  .wpforms-container {
+    margin: 0;
+
+    .wpforms-form {
+      .wpforms-field {
+        padding: 0;
+        margin-bottom: 29px;
+
+        .wpforms-field-large {
+          border: none;
+          border-radius: 0;
+          height: 50px;
+        }
+
+        textarea {
+          border: none;
+          border-radius: 0;
+        }
+      }
+    }
+
+    .wpforms-form button[type=submit] {
+      width: 200px !important;
+      transform: translateY(0);
+      height: 55px;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0;
+      border: none;
+      background-color: var(--site-green);
+      color: var(--site-white);
+
+      &:hover {
+        background-color: darken(#38a3a5, 10%);
+        border: var(--site-green);
+      }
+    }
+  }
 }

@@ -2,7 +2,7 @@
   <div class="container">
   <div class="row">
       <div class="col-md-12">
-        <h3 class="section-title">Things I did</h3>
+        <h3 class="section-title center-text">Things I did</h3>
       </div>
     </div>
     <div class="row d-flex justify-content-center">

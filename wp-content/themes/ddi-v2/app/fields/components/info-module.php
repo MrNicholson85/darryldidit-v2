@@ -21,9 +21,9 @@ $info_module
     ])
         ->addSelect('icon_select')
         ->addChoices([
-            'phone' => 'Phone',
-            'mail' => 'Mail',
-            'location' => 'Location',
+            'fa-phone' => 'Phone',
+            'fa-envelope' => 'Mail',
+            'fa-map-marker' => 'Location',
         ])
         ->addText('call_me', [
             'label' => 'Pre Title'
@@ -40,9 +40,9 @@ $info_module
             'label' => 'Icon',
         ])
         ->addChoices([
-            'phone' => 'Phone',
-            'mail' => 'Mail',
-            'location' => 'Location',
+            'fa-phone' => 'Phone',
+            'fa-envelope' => 'Mail',
+            'fa-map-marker' => 'Location',
         ])
         ->addText('email_me', [
             'label' => 'Pre title'
@@ -57,9 +57,9 @@ $info_module
     ])
         ->addSelect('icon_select')
         ->addChoices([
-            'phone' => 'Phone',
-            'mail' => 'Mail',
-            'location' => 'Location',
+            'fa-phone' => 'Phone',
+            'fa-envelope' => 'Mail',
+            'fa-map-marker' => 'Location',
         ])
         ->addText('visit_me', [
             'label' => 'Pre Title'

@@ -1,12 +1,12 @@
 .quotes {
-  background-color: $orange;
+  background-color: var(--site-green);
 
   &__list {
     padding-inline-start: 0 !important;
   }
 
   &__items {
-    color: white;
+    color: var(--site-dark-purple);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -36,5 +36,6 @@
     text-align: left !important;
     width: 100%;
     font-weight: bold;
+    color: var(--site-white);
   }
 }
