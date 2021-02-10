@@ -66,6 +66,7 @@ class Pagebuilder extends Controller
             {
                 $this_block = (object) [
                     'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
                     'link' => $block['cta_button'],
                 ];
 

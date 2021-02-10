@@ -7,6 +7,9 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $featured_projects = new FieldsBuilder('featured_projects');
 
 $featured_projects
+    ->addTrueFalse('section_effects', [
+        'label' => 'Add section effects'
+    ])
     ->addPostObject('featured_projects', [
         'label' => 'Featured Project',
         'multiple' => 1,

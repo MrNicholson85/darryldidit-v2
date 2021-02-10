@@ -1,4 +1,4 @@
-<section class="page-section skills @if ($c->section_effects)section-effects @endif">
+<div class="page-section skills @if ($c->section_effects)section-effects @endif">
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-6">
@@ -31,4 +31,4 @@
       </div>
     </div>    
   </div>
-</section>
+</div>

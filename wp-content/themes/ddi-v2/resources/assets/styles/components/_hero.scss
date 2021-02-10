@@ -7,7 +7,7 @@
 
   @include media-breakpoint-up(md) {
     height: 550px;
-    transform: translateY(-7.2%);
+    transform: translateY(0);
   }
 
   &__title {
@@ -15,7 +15,7 @@
   }
 
   &__sub-title {
-    color: $orange;
+    color: var(--site-light-green);
   }
 
   &__content {

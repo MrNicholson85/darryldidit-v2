@@ -37,13 +37,13 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-top: 25px solid $orange;
+    border-top: 25px solid;
     border-right: 425px solid transparent;
-    top: -40px;
+    top: 0;
     left: 0;
 
     @include media-breakpoint-up(sm) {
-      border-top: 44px solid $orange;
+      border-top: 44px solid var(--site-light-green);
       border-right: 768px solid transparent;
     }
 
@@ -65,13 +65,13 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-bottom: 25px solid $orange;
+    border-bottom: 25px solid var(--site-light-green);
     border-left: 425px solid transparent;
     bottom: 0;
     right: 0;
 
     @include media-breakpoint-up(sm) {
-      border-bottom: 44px solid $orange;
+      border-bottom: 44px solid var(--site-light-green);
       border-left: 768px solid transparent;
     }
 
@@ -92,9 +92,8 @@
 .btn {
   display: grid;
   align-items: center;
-  background-color: $orange;
+  background-color: var(--site-green);
   color: var(--white);
-  transform: translateY(40px);
 
   @include media-breakpoint-up(sm) {
     color: var(--white);
@@ -103,11 +102,13 @@
   &__primary {
     height: 55px;
     width: 200px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
   }
 
   &:hover {
     color: var(--white);
-    background-color: darken($orange, 10%);
+    background-color: darken(#38a3a5, 10%);
   }
 }
