@@ -58,13 +58,22 @@ class App extends Controller
 
     public function singleProject()
     {
+        $data = [];
         global $post;
+        $project = get_field('project', $post);
 
-        return(object) [
-            'project_title' => get_the_title($post),
-            'project_image' => get_field('project_image', $post) ?? null,
-            'project_content' => get_field('project_description', $post) ?? null,
-            'project_skills' => get_field('project_items', $post) ?? null
-        ];
+        if($project):
+            $this_layout = (object)[
+                'project_title' => get_the_title($post),
+                'project_select' => $project['project_media']['project_select'],
+                'project_images' => $project['project_media']['project_images'],
+                'project_image_feat' => $project['project_media']['project_images'][0],
+                'project_video' => $project['project_media']['project_video'],
+                'project_description' => $project['project_content']['project_description'],
+                'project_skills' => $project['project_content']['project_items'],
+            ];
+            array_push($data, $this_layout);
+        return $data;
+        endif;
     }
 }

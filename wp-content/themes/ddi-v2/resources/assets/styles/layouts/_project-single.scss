@@ -39,8 +39,24 @@
       height: 8px;
       width: 8px;
       border-radius: 50%;
-      color: $orange;
+      color: var(--site-green);
       font-size: 20px;
     }
+  }
+
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: var(--site-green);
+    text-align: center;
+    padding: 0 10px;
+    font-size: 25px;
+    color: var(--site-white);
+  }
+
+  .slider-next {
+    right: 15px;
   }
 }
