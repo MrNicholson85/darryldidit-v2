@@ -16,7 +16,7 @@ export default {
         if (scroll > 100) {
           $(".banner").css("background" , "white");
           $(".banner").css("border-bottom", "rgb(226, 226, 226) solid 1px");
-          $(".nav a").css("color", "orange");
+          $(".nav a").css("color", "var(--site-purple)");
         } else {
           $(".banner").css("background" , "transparent");
           $(".banner").css("border-bottom", "transparent");

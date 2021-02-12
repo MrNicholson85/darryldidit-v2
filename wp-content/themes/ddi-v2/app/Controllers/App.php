@@ -68,7 +68,7 @@ class App extends Controller
                 'project_select' => $project['project_media']['project_select'],
                 'project_images' => $project['project_media']['project_images'],
                 'project_image_feat' => $project['project_media']['project_images'][0],
-                'project_video' => $project['project_media']['project_video'],
+                'project_video' => $project['project_media']['video'],
                 'project_description' => $project['project_content']['project_description'],
                 'project_skills' => $project['project_content']['project_items'],
             ];

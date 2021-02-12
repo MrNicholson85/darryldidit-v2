@@ -1,29 +1,65 @@
+:root {
+  --desktop-hero-height: 450px;
+  --mobile-hero-height: 310px;
+}
+
 .single-project {
   position: relative;
 
   &__project-hero {
-    height: 450px;
+    height: var(--mobile-hero-height);
     backdrop-filter: blur(10px);
+    background-position: top;
+    background-size: cover;
 
     &::before {
       content: "";
       position: absolute;
       background-color: black;
-      opacity: 0.5;
+      opacity: 0.7;
       left: 0;
-      height: 450px;
+      height: var(--mobile-hero-height);
       width: 100%;
+    }
+
+    @include media-breakpoint-up(sm) {
+      height: var(--desktop-hero-height);
+
+      &::before {
+        height: var(--desktop-hero-height);
+      }
     }
   }
 
   &__hero-title {
     text-align: center;
     font-size: 30px;
-    height: 300px;
     width: 100%;
     font-weight: bold;
     color: white;
-    transform: translateY(40%);
+    position: absolute;
+    top: 40%;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 60px;
+    }
+  }
+
+  &__feat-video {
+    position: relative;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  &__content {
+    margin-top: 30px;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 0;
+    }
   }
 
   &__skill-list {
@@ -47,11 +83,11 @@
   .slider-nav {
     position: absolute;
     top: 50%;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     background-color: var(--site-green);
     text-align: center;
-    padding: 0 10px;
+    padding: 12px 0;
     font-size: 25px;
     color: var(--site-white);
   }
