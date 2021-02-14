@@ -1,5 +1,70 @@
 .banner {
   transition: all 0.5s ease-out;
+  min-height: 57px;
+  background-color: var(--site-white);
+
+  @include media-breakpoint-up(md) {
+    background-color: transparent;
+  }
+
+  .nav-primary {
+    width: 100%;
+    text-align: right;
+  }
+
+  .navbar-nav {
+    margin-top: 57px;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+  }
+
+  .navbar-toggler {
+    right: 0;
+    top: 0;
+    position: absolute;
+    font-size: 2.25rem;
+    color: var(--site-purple) !important;
+    min-height: 49px;
+    width: 100%;
+    text-align: right;
+
+    @include media-breakpoint-up(md) {
+      color: var(--site-white);
+    }
+  }
+
+  .menu-item {
+    width: 100%;
+
+    a {
+      color: var(--site-purple);
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: auto;
+      margin-right: 30px;
+
+      a {
+        color: var(--site-white);
+      }
+    }
+  }
+
+  &.show-bg {
+    @include media-breakpoint-up(md) {
+      background: var(--site-white);
+      border-bottom: var(--site-light-green) solid 1px;
+
+      .menu-item {
+        a {
+          color: var(--site-purple);
+        }
+      }
+    }
+  }
 }
 
 .content {
@@ -104,7 +169,7 @@
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 70px;
+    margin-top: 40px;
   }
 
   &:hover {

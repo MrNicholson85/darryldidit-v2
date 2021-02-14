@@ -46,7 +46,7 @@
   &__single-page-hero {
     position: relative;
     height: var(--single-page-hero-height);
-    background-color: $orange;
+    background-color: var(--site-purple);
 
     h2 {
       display: grid;

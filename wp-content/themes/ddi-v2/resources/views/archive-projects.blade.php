@@ -15,11 +15,12 @@
     </div>
     <div class="page-section"> 
       <div class="container">
+      @debug()
       <div class="row">
         @foreach($project_loop as $project_item)
           <div class="col-md-6">
             <a class="projects__link" href="{{ $project_item->permalink }}">
-              <div class="projects__cards" style="background-image: url({{ $project_item->project_image['url'] }});">
+              <div class="projects__cards" style="background-image: url({{ $project_item->project_image['project_media']['project_images'][0]['project_image'] ? $project_item->project_image['project_media']['project_images'][0]['project_image'] : 'https://via.placeholder.com/300' }});">
                 <span class="projects__title">{{ $project_item->title }}</span>
               </div>
             </a>

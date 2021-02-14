@@ -1,7 +1,7 @@
-.banner .nav li {
+.banner .navbar-nav li {
   @extend .nav-item;
 }
 
-.banner .nav a {
+.banner .navbar-nav a {
   @extend .nav-link;
 }

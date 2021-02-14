@@ -46,11 +46,10 @@ class App extends Controller
             $post_data = [
                 'title' => get_the_title($pi),
                 'permalink' => get_the_permalink($pi),
-                'project_image' => get_field('project_image', $pi),
+                'project_image' => get_field('project', $pi),
                 'project_decription' => get_field('project_description', $pi),
                 'Skills_loop' => get_field('project_items', $pi),
             ];
-
             array_push($data, (object) $post_data,);
         }
         return $data;

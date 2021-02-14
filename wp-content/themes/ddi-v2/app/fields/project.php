@@ -36,7 +36,7 @@ $project
           'width' => '50%'
         ]
       ])
-        ->addTextarea('project_description', ['label' => 'Project Description'])
+        ->addWYSIWYG('project_description', ['label' => 'Project Description'])
         ->addRepeater('project_items', [
           'label' => 'Project items'
         ])
