@@ -1,7 +1,7 @@
 .banner {
   transition: all 0.5s ease-out;
   min-height: 57px;
-  background-color: var(--site-white);
+  background-color: var(--site-light-green);
 
   @include media-breakpoint-up(md) {
     background-color: transparent;
@@ -33,6 +33,10 @@
 
     @include media-breakpoint-up(md) {
       color: var(--site-white);
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
