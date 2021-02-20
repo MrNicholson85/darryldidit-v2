@@ -62,7 +62,7 @@ class App extends Controller
         $project = get_field('project', $post);
 
         if($project):
-            $this_layout = (object)[
+            $this_layout = [
                 'project_title' => get_the_title($post),
                 'project_select' => $project['project_media']['project_select'],
                 'project_images' => $project['project_media']['project_images'],
@@ -71,7 +71,7 @@ class App extends Controller
                 'project_description' => $project['project_content']['project_description'],
                 'project_skills' => $project['project_content']['project_items'],
             ];
-            array_push($data, $this_layout);
+            array_push($data, (object) $this_layout);
         return $data;
         endif;
     }

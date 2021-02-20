@@ -1,3 +1,4 @@
+@debug
 <div class="page-section featured-project @if ($c->section_effects)section-effects @endif">
   <div class="container">
   <div class="row">
@@ -8,7 +9,7 @@
     <div class="row">
       @forelse ($project_loop as $p )
         @php
-          $feat_image = $p->project_image['project_media']['project_images'][0]['project_image'];
+          $feat_image = $p->project_image['project_media']['project_images'][0]['project_image']['url'];
         @endphp
         <div class="col-md-3">
           <a class="featured-project__link" href="{{$p->permalink}}">

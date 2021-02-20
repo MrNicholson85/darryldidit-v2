@@ -40,12 +40,12 @@ export default {
     });
 
     $('.single-project__test').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       asNavFor: '.single-project__feat-image',
       arrows: false,
       adaptiveHeight: true,
-
+      focusOnSelect: true,
     });
 
     //custom slider nav
