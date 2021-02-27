@@ -95,4 +95,25 @@
   .slider-next {
     right: 15px;
   }
+
+  &__feat-image-nav {
+    .slick-slide {
+      width: 45% !important;
+      height: 150px;
+      object-fit: contain;
+      object-position: center;
+      overflow: hidden;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: solid var(--site-purple) 5px;
+      }
+    }
+  }
+
+  &__project-content {
+    margin-top: 30px;
+  }
 }

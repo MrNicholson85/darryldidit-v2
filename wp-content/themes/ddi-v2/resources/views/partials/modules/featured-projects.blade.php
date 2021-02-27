@@ -1,4 +1,3 @@
-@debug
 <div class="page-section featured-project @if ($c->section_effects)section-effects @endif">
   <div class="container">
   <div class="row">

@@ -15,7 +15,6 @@
     </div>
     <div class="page-section"> 
       <div class="container">
-      @debug()
       <div class="row">
         @foreach($project_loop as $project_item)
           <div class="col-md-6">

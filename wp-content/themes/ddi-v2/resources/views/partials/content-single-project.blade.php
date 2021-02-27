@@ -12,16 +12,16 @@
       <div class="row">
           @if ($single_project[0]->project_select == 'images')
             <div class="col-md-8">
-            <div class="single-project__feat-image">
-              @php $i = 0; @endphp
-              @foreach($single_project[0]->project_images as $p)
-                <img src="{{ $p['project_image']['url'] }}" class="img-fluid" />
-                @php $i++; @endphp
-              @endforeach
-            </div>
+              <div class="single-project__feat-image">
+                @php $i = 0; @endphp
+                @foreach($single_project[0]->project_images as $p)
+                  <img src="{{ $p['project_image']['url'] }}" class="img-fluid" />
+                  @php $i++; @endphp
+                @endforeach
+              </div>
             </div>
             <div class="col-md-4">
-            <div class="single-project__test">
+            <div class="single-project__feat-image-nav" data-slide_count="{{ $i }}">
               @php $i = 0; @endphp
               @foreach($single_project[0]->project_images as $p)
                 <img src="{{ $p['project_image']['sizes']['medium'] }}" class="img-fluid" width=""/>
@@ -29,23 +29,27 @@
               @endforeach
             </div>
             </div>
-
           @else
             <div class="single-project__feat-video">
               {!! $single_project[0]->project_video !!}
             </div>
           @endif
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="single-project__content"> {!! $single_project[0]->project_description !!}</div>
-            <ul class="single-project__skill-list">
+      <div class="single-project__project-content">
+        <div class="row">
+        <div class="col-md-8">
+          <div class="single-project__content">
+            {!! $single_project[0]->project_description !!}
+          </div>
+        </div>
+         <div class="col-md-3">
+         <ul class="single-project__skill-list">
               @foreach($single_project[0]->project_skills as $skills)
                 <li class="single-project__skill-item">{{ $skills['skills_used'] }}</li>
               @endforeach
             </ul>
-          </div>
-        </div>
+         </div>
+      </div>
       </div>
     </div>
   </div>

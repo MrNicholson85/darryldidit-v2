@@ -31,17 +31,19 @@ export default {
       adaptiveHeight: true,
     });
 
+    const slider_count = document.querySelector('.single-project__feat-image-nav');
+
     $('.single-project__feat-image').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
       adaptiveHeight: true,
-      asNavFor: '.single-project__test',
+      asNavFor: '.single-project__feat-image-nav',
     });
 
-    $('.single-project__test').slick({
-      slidesToShow: 3,
-      slidesToScroll: 3,
+    $('.single-project__feat-image-nav').slick({
+      slidesToShow: parseInt(slider_count.dataset.slide_count),
+      slidesToScroll: parseInt(slider_count.dataset.slide_count),
       asNavFor: '.single-project__feat-image',
       arrows: false,
       adaptiveHeight: true,
@@ -50,12 +52,12 @@ export default {
 
     //custom slider nav
     $('.slider-prev').click(function(){
-      $(this).parent().find('.single-project__test').slick('slickPrev');
+      $(this).parent().find('.single-project__feat-image-nav').slick('slickPrev');
     } );
 
     $('.slider-next').click(function(e){
       e.preventDefault();
-      $(this).parent().find('.single-project__test').slick('slickNext');
+      $(this).parent().find('.single-project__feat-image-nav').slick('slickNext');
     } );
   },
   finalize() {
