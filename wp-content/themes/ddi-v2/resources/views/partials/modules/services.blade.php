@@ -1,3 +1,4 @@
+@if($c->title)
 <div class="page-section services @if ($c->section_effects)section-effects @endif" style="background-image: url('{{ $c->background_image }}');">
   <div class="container">
     <div class="row">
@@ -42,3 +43,4 @@
     </div>
   </div>
 </div>
+@endif
