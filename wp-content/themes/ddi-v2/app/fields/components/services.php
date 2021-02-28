@@ -7,6 +7,9 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 $services = new FieldsBuilder('services');
 
 $services
+    ->addTrueFalse('section_effects', [
+        'label' => 'Add section effects'
+    ])
     ->addImage('background_image', [
         'label' => 'Background Image',
         'return_format' => 'array',
@@ -14,6 +17,7 @@ $services
     ->addText('title')
     ->addTextArea('copy')
     ->addGroup('dev', [
+        'label' => 'Web Development',
         'wrapper' => [
             'width' => '33%'
         ]
@@ -32,6 +36,7 @@ $services
         ->addLink('url')
     ->endGroup()
     ->addGroup('arvr', [
+        'label' => 'AR/VR',
         'wrapper' => [
             'width' => '34%'
         ]
@@ -50,6 +55,7 @@ $services
         ->addLink('url')
     ->endGroup()
     ->addGroup('art', [
+        'label' => 'Artwork',
         'wrapper' => [
             'width' => '33%'
         ]
