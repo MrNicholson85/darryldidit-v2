@@ -1,0 +1,61 @@
+.services {
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background-position: top;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+
+  &__section-title {
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+
+  &__section-content {
+    padding: 0 100px;
+    margin-bottom: 50px;
+  }
+
+  &__cards {
+    margin-top: 30px;
+  }
+
+  &__cards-icon {
+    color: var(--site-purple);
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  &__cards-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  &__cards-content {
+    min-height: 100px;
+  }
+
+  &__card-items {
+    background-color: var(--site-white);
+    color: black;
+    border-radius: 10px;
+    padding: 40px 20px;
+  }
+
+  &__cards-link {
+    a {
+      color: var(--site-purple);
+    }
+  }
+}

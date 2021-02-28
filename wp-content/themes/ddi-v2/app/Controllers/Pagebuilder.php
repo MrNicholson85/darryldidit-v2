@@ -73,6 +73,34 @@ class Pagebuilder extends Controller
                 array_push($data, $this_block);
             }
 
+            if($block['acf_fc_layout'] == 'services')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+                    'background_image' => $block['background_image']['sizes']['large'],
+                    'title' => $block['title'],
+                    'content' => $block['copy'],
+
+                    'dev_icon' => $block['dev']['icon_selector'],
+                    'dev_title' => $block['dev']['title'],
+                    'dev_copy' => $block['dev']['content'],
+                    'dev_link' => $block['dev']['url'],
+
+                    'art_icon' => $block['art']['icon_selector'],
+                    'art_title' => $block['art']['title'],
+                    'art_copy' => $block['art']['content'],
+                    'art_link' => $block['art']['url'],
+
+                    'arvr_icon' => $block['arvr']['icon_selector'],
+                    'arvr_title' => $block['arvr']['title'],
+                    'arvr_copy' => $block['arvr']['content'],
+                    'arvr_link' => $block['arvr']['url']
+                ];
+
+                array_push($data, $this_block);
+            }
+
             if($block['acf_fc_layout'] == 'info_module')
             {
                 $this_block = (object) [

@@ -1,12 +1,12 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faBars, faChevronLeft, faChevronRight, faEnvelope, faMapMarkedAlt, faMapMarker, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faChevronLeft, faChevronRight, faCode, faEnvelope, faEraser, faMapMarkedAlt, faMapMarker, faPhone, faVrCardboard } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default {
   init() {
     // JavaScript to be fired on all pages
 
-    library.add(faFacebook, faTwitter, faPhone, faEnvelope, faMapMarkedAlt, faMapMarker, faChevronRight, faChevronLeft, faBars);
+    library.add(faFacebook, faTwitter, faPhone, faEnvelope, faMapMarkedAlt, faMapMarker, faChevronRight, faChevronLeft, faBars, faCode, faVrCardboard, faEraser);
 
     dom.watch();
 

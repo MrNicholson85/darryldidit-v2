@@ -20,5 +20,8 @@
       @if ($c->block_type == 'info_module')
           @include('partials.modules.info-module')
       @endif
+      @if ($c->block_type == 'services')
+        @include('partials.modules.services')
+      @endif
     @endforeach
 @endsection
