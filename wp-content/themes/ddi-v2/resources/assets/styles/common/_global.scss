@@ -78,6 +78,10 @@
 .page-section {
   padding: 100px 0;
   position: relative;
+
+  &--lg {
+    padding: 200px;
+  }
 }
 
 .section-title {
