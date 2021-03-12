@@ -1,0 +1,26 @@
+.single-image-content {
+  position: relative;
+
+  &__image {
+    background-size: cover;
+    height: 600px;
+    width: 800px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
+  }
+
+  &__copy {
+    position: relative;
+    background-color: var(--site-light-green);
+    min-height: 400px;
+    border-radius: 10px;
+    padding: 60px;
+    top: 25%;
+    color: var(--site-white);
+  }
+}
