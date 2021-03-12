@@ -23,5 +23,8 @@
       @if ($c->block_type == 'services')
         @include('partials.modules.services')
       @endif
+      @if ($c->block_type == 'single_image_content')
+        @include('partials.modules.single-image-content')
+      @endif
     @endforeach
 @endsection

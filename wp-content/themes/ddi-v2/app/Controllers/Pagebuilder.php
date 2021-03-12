@@ -101,6 +101,25 @@ class Pagebuilder extends Controller
                 array_push($data, $this_block);
             }
 
+            if($block['acf_fc_layout'] == 'single_image_content')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+
+                    //Image Content
+                    'image' => $block['image_container']['image']['sizes']['large'],
+
+                    //Content Container
+                    'pre_title' => $block['content_container']['pre_title'],
+                    'title' => $block['content_container']['title'],
+                    'content' => $block['content_container']['content'],
+                    'link' => $block['content_container']['link'],
+                    
+                ];
+                array_push($data, $this_block);
+            }
+
             if($block['acf_fc_layout'] == 'info_module')
             {
                 $this_block = (object) [
