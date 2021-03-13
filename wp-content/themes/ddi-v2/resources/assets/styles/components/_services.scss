@@ -23,8 +23,12 @@
   }
 
   &__section-content {
-    padding: 0 100px;
+    padding: 0 40px;
     margin-bottom: 50px;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0 100px;
+    }
   }
 
   &__cards {
@@ -51,6 +55,11 @@
     color: black;
     border-radius: 10px;
     padding: 40px 20px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
   }
 
   &__cards-link {
