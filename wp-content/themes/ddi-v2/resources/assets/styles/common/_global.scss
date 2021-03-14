@@ -76,10 +76,10 @@
 }
 
 .page-section {
-  padding: 100px 0;
   position: relative;
+  padding: 100px 0;
 
-  &--lg {
+  @include media-breakpoint-up(md) {
     padding: 200px 0;
   }
 }
@@ -87,7 +87,7 @@
 .section-title {
   font-size: 55px;
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   text-transform: uppercase;
 
   &--tight {
@@ -110,17 +110,13 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-top: 25px solid;
+    border-top: 22px solid var(--site-light-green);
     border-right: 425px solid transparent;
     top: 0;
     left: 0;
 
-    @include media-breakpoint-up(sm) {
-      border-top: 44px solid var(--site-light-green);
-      border-right: 768px solid transparent;
-    }
-
     @include media-breakpoint-up(md) {
+      border-top: 44px solid var(--site-light-green);
       border-right: 768px solid transparent;
     }
 
@@ -138,7 +134,7 @@
     position: absolute;
     width: 0;
     height: 0;
-    border-bottom: 25px solid var(--site-light-green);
+    border-bottom: 22px solid var(--site-light-green);
     border-left: 425px solid transparent;
     bottom: 0;
     right: 0;

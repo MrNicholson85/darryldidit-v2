@@ -1,19 +1,38 @@
 
 .skills {
   background-color: var(--site-white);
+  text-align: center;
+
+  &__header {
+    padding: 0 20px;
+    margin-bottom: 45px;
+
+    @include media-breakpoint-up(md) {
+      padding: 0 60px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 0 175px;
+    }
+  }
+
+  &__content {
+    margin-top: 45px;
+    width: 100%;
+  }
+
+  hr {
+    border-top: 3px solid var(--site-light-green);
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   &__skill-level {
     height: 15px;
     width: 100%;
     background-color: #57cc99;
-  }
-
-  &__content {
-    margin-top: 30px;
-
-    @include media-breakpoint-up(md) {
-      margin-top: 0;
-    }
+    border-radius: 25px;
   }
 
   &__items {
@@ -22,13 +41,17 @@
 
   &__skill-title {
     margin-bottom: 3px;
+    text-align: left;
+    font-weight: 400;
   }
 
   &__progress {
     height: 15px;
+    font-weight: bold;
     background-color: var(--site-purple);
     margin-bottom: 20px;
     position: relative;
+    border-radius: 25px;
   }
 
   &__progress-display {

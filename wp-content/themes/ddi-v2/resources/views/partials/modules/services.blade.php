@@ -1,11 +1,11 @@
 @if($c->title)
-<div class="page-section--lg services @if ($c->section_effects)section-effects @endif" style="background-image: url('{{ $c->background_image }}');">
+<div class="page-section services @if ($c->section_effects)section-effects @endif" style="background-image: url('{{ $c->background_image }}');">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="services__section-title h2">   
+        <h3 class="section-title">   
           {{ $c->title }}
-        </div>
+        </h3>
         <div class="services__section-content">
           {{ $c->content }}
         </div>
