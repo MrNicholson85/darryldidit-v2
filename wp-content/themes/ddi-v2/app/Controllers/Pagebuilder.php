@@ -10,13 +10,18 @@ class Pagebuilder extends Controller
 
     public function page_builder()
     {
-        global $posts;
+        global $post;
+        $id = $post->ID;
 
         // Get all page builder fields
         $page_builder = get_field('components');
 
         // Set up array
         $data = [];
+
+        $feat_project = get_field('f_projects');
+
+       
 
         // Loop through each block
         foreach ($page_builder as $block)
@@ -67,9 +72,11 @@ class Pagebuilder extends Controller
                 $this_block = (object) [
                     'block_type' => $block['acf_fc_layout'] ?? null,
                     'section_effects' => $block['section_effects'],
+                    'image' => get_the_post_thumbnail(),
                     'link' => $block['cta_button'],
+                    'projects' => $block['f_projects'],
                 ];
-
+                
                 array_push($data, $this_block);
             }
 

@@ -10,7 +10,7 @@ $featured_projects
     ->addTrueFalse('section_effects', [
         'label' => 'Add section effects'
     ])
-    ->addPostObject('featured_projects', [
+    ->addPostObject('f_projects', [
         'label' => 'Featured Project',
         'multiple' => 1,
         'return_format' => 'object',
