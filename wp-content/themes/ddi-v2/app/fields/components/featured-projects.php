@@ -10,10 +10,10 @@ $featured_projects
     ->addTrueFalse('section_effects', [
         'label' => 'Add section effects'
     ])
-    ->addPostObject('f_projects', [
-        'label' => 'Featured Project',
+    ->addRelationship('featured_projects', [
         'multiple' => 1,
         'return_format' => 'object',
+        'elements' => 'featured_image',
     ])
     
     ->addLink('cta_button', [

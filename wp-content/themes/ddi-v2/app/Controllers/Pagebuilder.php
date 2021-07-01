@@ -10,18 +10,12 @@ class Pagebuilder extends Controller
 
     public function page_builder()
     {
-        global $post;
-        $id = $post->ID;
 
         // Get all page builder fields
         $page_builder = get_field('components');
 
         // Set up array
         $data = [];
-
-        $feat_project = get_field('f_projects');
-
-       
 
         // Loop through each block
         foreach ($page_builder as $block)
@@ -69,15 +63,28 @@ class Pagebuilder extends Controller
 
             if($block['acf_fc_layout']  == 'featured_projects')
             {
-                $this_block = (object) [
+                global $post;
+
+                $featured_project = $block['featured_projects'];
+                $feat_project_info = [];
+
+                $post_data = [
                     'block_type' => $block['acf_fc_layout'] ?? null,
                     'section_effects' => $block['section_effects'],
-                    'image' => get_the_post_thumbnail(),
-                    'link' => $block['cta_button'],
-                    'projects' => $block['f_projects'],
                 ];
+
+               foreach($featured_project as $fp) {
+                $feat_project_info = [
+                    'project_title' => get_the_title($featured_project),
+                    'permalink' => get_the_permalink($featured_project),
+                    'featured_image' => get_the_post_thumbnail_url( $featured_project, 'medium' ) ?? null,
+                ];
+               }
+                    
+                array_push($featured_project, $feat_project_info);
+                    
+                array_push($data, (object) array_merge($post_data, $featured_project));
                 
-                array_push($data, $this_block);
             }
 
             if($block['acf_fc_layout'] == 'services')
