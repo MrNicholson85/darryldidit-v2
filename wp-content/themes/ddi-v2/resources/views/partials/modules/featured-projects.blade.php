@@ -6,39 +6,17 @@
       </div>
     </div>
     <div class="row">
-    @php
-      $featured_projects = get_field('featured_projects');
-    @endphp
-    
-     @dump($c);
-     @foreach ($c as $p)
-        
+      @foreach ($c as $p)
         @if ($p->post_title)
-         {{$p->post_title}}
-        @endif
-         
-     @endforeach
-      <div class="col-md-3">
-        <a class="featured-project__link" href="{{get_permalink( $c )}}">
-          <div class="featured-project__cards" style="background-image: url('{{ $c->featured_image ? $c->featured_image : 'https://via.placeholder.com/300' }}')">
-            <span class="featured-project__title">{{get_the_title($c)}}</span>
-          </div>
-        </a>       
-      </div>
-
-      {{-- @forelse ($project_loop as $p )
-        @php
-          $feat_image = $p->project_image['project_media']['project_images'][0]['project_image']['url'];
-        @endphp
-        <div class="col-md-3">
-          <a class="featured-project__link" href="{{$p->permalink}}">
-            <div class="featured-project__cards" style="background-image: url('{{ $feat_image ? $feat_image : 'https://via.placeholder.com/300' }}')">
-              <span class="featured-project__title">{{ $p->title }}</span>
+          <div class="col-md-3">
+          <a class="featured-project__link" href="{{the_permalink($p)}}">
+            <div class="featured-project__cards" style="background-image: url('{{get_the_post_thumbnail_url($p)}}')">
+              <span class="featured-project__title">{{$p->post_title}}</span>
             </div>
           </a>       
         </div>
-      @empty
-      @endforelse --}}
+        @endif
+      @endforeach
     </div>
     <a class="btn btn__primary" href="{{ $c->link['url'] }}">
       {{ $c->link['title']}}

@@ -61,3 +61,4 @@ wp-content/cache/supercache/*
 *.asf
 *.wmv
 *.avi
+.htaccess

@@ -75,16 +75,15 @@ class Pagebuilder extends Controller
 
                foreach($featured_project as $fp) {
                 $feat_project_info = [
-                    'project_title' => get_the_title($featured_project),
-                    'permalink' => get_the_permalink($featured_project),
-                    'featured_image' => get_the_post_thumbnail_url( $featured_project, 'medium' ) ?? null,
+                    'project_title' => get_the_title($fp),
+                    'permalink' => get_the_permalink($fp),
+                    'featured_image' => get_the_post_thumbnail_url( $fp, 'medium' ) ?? null,
                 ];
                }
                     
                 array_push($featured_project, $feat_project_info);
                     
-                array_push($data, (object) array_merge($post_data, $featured_project));
-                
+                array_push($data, (object) array_merge($post_data, $featured_project));                
             }
 
             if($block['acf_fc_layout'] == 'services')
