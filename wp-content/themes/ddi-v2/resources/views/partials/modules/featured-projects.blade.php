@@ -18,8 +18,8 @@
         @endif
       @endforeach
     </div>
-    <a class="btn btn__primary" href="{{ $c->link['url'] }}">
-      {{ $c->link['title']}}
+    <a class="btn btn__primary" href="/projects">
+      View More
     </a>  
   </div>
 </div>

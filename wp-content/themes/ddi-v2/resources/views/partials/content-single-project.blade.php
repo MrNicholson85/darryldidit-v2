@@ -1,6 +1,6 @@
 @if($single_project[0])
 <div class="single-project">
-  <div class="container-fluid single-project__project-hero" style="background-image: url({{ $single_project[0]->project_image_feat['project_image']['url'] }})">
+  <div class="container-fluid single-project__project-hero" style="background-image: url({{ get_the_post_thumbnail_url() }})">
     <div class="row">
       <div class="single-project__hero-title">
         {{ $single_project[0]->project_title }}

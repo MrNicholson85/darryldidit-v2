@@ -3,6 +3,8 @@
   position: relative;
   width: 100%;
   z-index: -1;
+  background-position: center;
+  background-size: cover;
 
   @include media-breakpoint-up(md) {
     height: 550px;
