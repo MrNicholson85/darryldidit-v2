@@ -11,6 +11,7 @@ $pagebuilder
     ->setLocation('post_type', '==', 'front_page');
   
 $pagebuilder
-    ->addFields(get_field_partial('partials.builder'));
+    ->addFields(get_field_partial('partials.builder'))
+    ->addFields(get_field_partial('partials.header'));
 
 return $pagebuilder;

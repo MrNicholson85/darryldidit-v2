@@ -60,4 +60,55 @@
       color: white;
     }
   }
+
+  &__filter {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__filter-btn {
+    background-color: var(--site-purple);
+    padding: 10px 15px;
+    margin-right: 15px;
+  }
+
+  .projects__type--target:not(:target) ~ .project__item {
+    display: block;
+  }
+
+  .projects__type--target:target ~ .project__item {
+    display: none;
+  }
+
+  [id="tag:arvr"]:target ~ [data-tag~="arvr"] {
+    display: block;
+  }
+
+  [id="tag:art-work"]:target ~ [data-tag~="art-work"] {
+    display: block;
+  }
+
+  [id="tag:web-development"]:target ~ [data-tag~="web-development"] {
+    display: block;
+  }
+}
+
+.css-filter--target:not(:target) ~ .css-filter--item {
+  display: block;
+}
+
+.css-filter--target:target ~ .css-filter--item {
+  display: none;
+}
+
+[id="tag:filter1"]:target ~ [data-tag~="filter1"] {
+  display: block;
+}
+
+[id="tag:filter2"]:target ~ [data-tag~="filter2"] {
+  display: block;
+}
+
+[id="tag:filter3"]:target ~ [data-tag~="filter3"] {
+  display: block;
 }

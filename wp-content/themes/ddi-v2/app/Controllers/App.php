@@ -49,6 +49,7 @@ class App extends Controller
                 'project_image' => get_field('project', $pi),
                 'project_decription' => get_field('project_description', $pi),
                 'Skills_loop' => get_field('project_items', $pi),
+                'project_type' => get_field('project_type', $pi),
             ];
             array_push($data, (object) $post_data,);
         }

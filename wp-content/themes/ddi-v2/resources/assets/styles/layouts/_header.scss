@@ -1,7 +1,34 @@
-.banner .navbar-nav li {
-  @extend .nav-item;
+.banner {
+  .navbar-collapse {
+    position: relative;
+
+    .menu-primary-menu-container {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .navbar-nav {
+    li {
+      @extend .nav-item;
+    }
+
+    a {
+      @extend .nav-link;
+    }
+  }
+
+  .logo {
+    svg {
+      path {
+        fill: var(--site-light-green);
+      }
+    }
+  }
 }
 
-.banner .navbar-nav a {
-  @extend .nav-link;
+.logged-in {
+  .banner {
+    margin-top: 32px;
+  }
 }

@@ -6,6 +6,15 @@
   background-position: center;
   background-size: cover;
 
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.384);
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+
   @include media-breakpoint-up(md) {
     height: 550px;
   }

@@ -12,6 +12,8 @@ $project
   ->setGroupConfig('style', 'seamless');
 
 $project
+  ->addSelect('project_type')
+  ->addChoices([ 'select' => 'Select Type', 'arvr' => 'AR/VR', 'web-development' => 'Web Development', 'art-work' => 'Art Work'])
   ->addGroup('project')
     ->addGroup('project_media', [
       'wrapper' => [

@@ -3,10 +3,11 @@
 /** Import everything from autoload */
 @import "./autoload/**/*";
 @import "node_modules/slick-carousel/slick/slick.scss";
+@import "~isotope/dist/isotope.min.css";
 
 /**
  * Import npm dependencies
- *
+ *F
  * Prefix your imports with `~` to grab from node_modules/
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
