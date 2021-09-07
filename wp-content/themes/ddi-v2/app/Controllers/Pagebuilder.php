@@ -147,6 +147,16 @@ class Pagebuilder extends Controller
                 ];
                 array_push($data, $this_block);
             }
+
+            if($block['acf_fc_layout'] == 'basic_content')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+                    'content_block' => $block['content'],
+                ];
+                array_push($data, $this_block);
+            }
         }
 
         $data = (object) $data;

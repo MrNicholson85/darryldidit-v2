@@ -1,4 +1,5 @@
 .content-info {
+  padding-top: 100px;
   background-color: #333;
   color: white;
 
@@ -7,17 +8,41 @@
   }
 
   &__primary {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px auto;
+    column-gap: 30px;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    color: var(--site-light-green);
+  }
+
+  &__contact-us {
+    padding-top: 15px;
   }
 
   &__contact-us-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 10px auto;
+    column-gap: 25px;
+    margin-bottom: 20px;
 
     span {
-      margin-left: 15px;
+      transform: translateY(-5px);
+    }
+  }
+
+  .wpforms-container {
+    .wpforms-submit {
+      background-color: var(--site-light-green) !important;
+      color: white !important;
+      border: none !important;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: var(--site-green) !important;
+      }
     }
   }
 }

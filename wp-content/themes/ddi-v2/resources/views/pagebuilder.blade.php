@@ -26,5 +26,11 @@
       @if ($c->block_type == 'single_image_content')
         @include('partials.modules.single-image-content')
       @endif
+      @if ($c->block_type == 'basic_content')
+        @include('partials.modules.basic-content')
+      @endif
+      @if ($c->block_type == 'fifty_fifty_content')
+        @include('partials.modules.fifty-fifty-content')
+      @endif
     @endforeach
 @endsection

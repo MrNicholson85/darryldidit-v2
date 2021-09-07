@@ -16,6 +16,8 @@ $builder
       ->addLayout(get_field_partial('components.featured-projects'))
       ->addLayout(get_field_partial('components.info-module'))
       ->addLayout(get_field_partial('components.services'))
-      ->addLayout(get_field_partial('components.single-image-content'));
+      ->addLayout(get_field_partial('components.single-image-content'))
+      ->addLayout(get_field_partial('components.basic-content'))
+      ->addLayout(get_field_partial('components.fifty-fifty-content'));
 
 return $builder;
