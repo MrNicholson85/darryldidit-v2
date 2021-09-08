@@ -157,6 +157,20 @@ class Pagebuilder extends Controller
                 ];
                 array_push($data, $this_block);
             }
+
+            if($block['acf_fc_layout'] == 'fifty_fifty_content')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+                    'background_color' => $block['background_color'],
+                    'group_a_image' => $block['group_a']['image'],
+                    'group_a_content' => $block['group_a']['content'],
+                    'group_b_image' => $block['group_b']['image'],
+                    'group_b_content' => $block['group_b']['content'],
+                ];
+                array_push($data, $this_block);
+            }
         }
 
         $data = (object) $data;
