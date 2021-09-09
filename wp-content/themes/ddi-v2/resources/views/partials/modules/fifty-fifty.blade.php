@@ -1,4 +1,4 @@
-<div class="page-section fifty-fifty {{ $c->background_color }}">
+<div class="page-section @if ($c->section_effects)section-effects @endif fifty-fifty fifty-fifty--{{ $c->background_color }}">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
