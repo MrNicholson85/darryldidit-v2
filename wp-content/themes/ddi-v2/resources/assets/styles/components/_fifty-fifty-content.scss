@@ -5,6 +5,33 @@
 
   &--white {
     background-color: var(--site-white);
+
+    .wpforms-container-full {
+      .wpforms-field-name {
+        .wpforms-field-row {
+          .wpforms-field-row-block {
+            input {
+              background-color: var(--site-lighter-gray);
+              border: solid 1px var(--site-lightest-gray) !important;
+            }
+          }
+        }
+      }
+
+      .wpforms-field-email {
+        .wpforms-field-large {
+          background-color: var(--site-lighter-gray);
+          border: solid 1px var(--site-lightest-gray) !important;
+        }
+      }
+
+      .wpforms-field-textarea {
+        .wpforms-field-large {
+          background-color: var(--site-lighter-gray);
+          border: solid 1px var(--site-lightest-gray) !important;
+        }
+      }
+    }
   }
 
   // Form styling
