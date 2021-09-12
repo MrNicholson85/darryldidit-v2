@@ -6,6 +6,10 @@
       position: absolute;
       right: 0;
     }
+
+    &.show {
+      height: 220px;
+    }
   }
 
   .navbar-nav {
@@ -21,7 +25,11 @@
   .logo {
     svg {
       path {
-        fill: var(--site-light-green);
+        fill: var(--site-purple);
+
+        @include media-breakpoint-up(md) {
+          fill: var(--site-light-green);
+        }
       }
     }
   }
