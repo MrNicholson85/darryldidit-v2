@@ -10,6 +10,7 @@ class FrontPage extends Controller
 
     public function page_builder()
     {
+
         // Get all page builder fields
         $page_builder = get_field('components');
 
@@ -19,6 +20,9 @@ class FrontPage extends Controller
         // Loop through each block
         foreach ($page_builder as $block)
         {
+            /**
+             * Hero Component
+             */
             if ($block['acf_fc_layout'] == 'hero')
             {
                 // Do any logic for this component here
@@ -36,6 +40,7 @@ class FrontPage extends Controller
             {
                 $this_block = (object) [
                     'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
                     'about_title' => $block['about']['title'] ?? null,
                     'about_description' => $block['about']['content_description'] ?? null,
 
@@ -43,6 +48,127 @@ class FrontPage extends Controller
                     'skill_list' => $block['skills']['skill_list'] ?? null,
                 ];
 
+                array_push($data, $this_block);
+            }
+
+            if($block['acf_fc_layout']  == 'quotes')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'quotes' => $block['quotes'],
+                ];
+
+                array_push($data, $this_block);
+            }
+
+            if($block['acf_fc_layout']  == 'featured_projects')
+            {
+                global $post;
+
+                $featured_project = $block['featured_projects'];
+                $feat_project_info = [];
+
+                $post_data = [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+                ];
+
+               foreach($featured_project as $fp) {
+                $feat_project_info = [
+                    'project_title' => get_the_title($fp),
+                    'permalink' => get_the_permalink($fp),
+                    'featured_image' => get_the_post_thumbnail_url( $fp, 'medium' ) ?? null,
+                ];
+               }
+                    
+                array_push($featured_project, $feat_project_info);
+                    
+                array_push($data, (object) array_merge($post_data, $featured_project));                
+            }
+
+            if($block['acf_fc_layout'] == 'services')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+                    'background_image' => $block['background_image']['sizes']['large'],
+                    'title' => $block['title'],
+                    'content' => $block['copy'],
+
+                    'dev_icon' => $block['dev']['icon_selector'],
+                    'dev_title' => $block['dev']['title'],
+                    'dev_copy' => $block['dev']['content'],
+                    'dev_link' => $block['dev']['url'],
+
+                    'art_icon' => $block['art']['icon_selector'],
+                    'art_title' => $block['art']['title'],
+                    'art_copy' => $block['art']['content'],
+                    'art_link' => $block['art']['url'],
+
+                    'arvr_icon' => $block['arvr']['icon_selector'],
+                    'arvr_title' => $block['arvr']['title'],
+                    'arvr_copy' => $block['arvr']['content'],
+                    'arvr_link' => $block['arvr']['url']
+                ];
+
+                array_push($data, $this_block);
+            }
+
+            if($block['acf_fc_layout'] == 'single_image_content')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+
+                    //Image Content
+                    'image' => $block['image_container']['image']['sizes']['large'],
+
+                    //Content Container
+                    'pre_title' => $block['content_container']['pre_title'],
+                    'title' => $block['content_container']['title'],
+                    'content' => $block['content_container']['content'],
+                    'link' => $block['content_container']['link'],
+                    
+                ];
+                array_push($data, $this_block);
+            }
+
+            if($block['acf_fc_layout'] == 'info_module')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'title' => $block['content_title'] ?? null,
+                    'content' => $block['contact_message'],
+                    'phone_info' => $block['phone_info'],
+                    'email_info' => $block['email_info'],
+                    'location_info' => $block['location_info'],
+                    'contact_form' => $block['contact_form_info'],
+                    'map' => $block['map_info'],
+                ];
+                array_push($data, $this_block);
+            }
+
+            if($block['acf_fc_layout'] == 'basic_content')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+                    'content_block' => $block['content'],
+                ];
+                array_push($data, $this_block);
+            }
+
+            if($block['acf_fc_layout'] == 'fifty_fifty_content')
+            {
+                $this_block = (object) [
+                    'block_type' => $block['acf_fc_layout'] ?? null,
+                    'section_effects' => $block['section_effects'],
+                    'background_color' => $block['background_color'],
+                    'group_a_image' => $block['group_a']['image'],
+                    'group_a_content' => $block['group_a']['content'],
+                    'group_b_image' => $block['group_b']['image'],
+                    'group_b_content' => $block['group_b']['content'],
+                ];
                 array_push($data, $this_block);
             }
         }
