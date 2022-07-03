@@ -70,6 +70,7 @@ class App extends Controller
                 'project_image_feat' => $project['project_media']['project_images'][0],
                 'project_video' => $project['project_media']['video'],
                 'project_description' => $project['project_content']['project_description'],
+                'project_cta' => $project['project_content']['project_cta'],
                 'project_skills' => $project['project_content']['project_items'],
             ];
             array_push($data, (object) $this_layout);

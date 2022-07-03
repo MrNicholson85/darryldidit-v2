@@ -39,6 +39,9 @@ $project
         ]
       ])
         ->addWYSIWYG('project_description', ['label' => 'Project Description'])
+        ->addLink('project_cta', [
+          'return_format' => 'array',
+        ])
         ->addRepeater('project_items', [
           'label' => 'Project items'
         ])
