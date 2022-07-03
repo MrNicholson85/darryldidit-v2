@@ -43,9 +43,9 @@
 
             @if( $single_project[0]->project_cta['url'])
             <div class="single-project__cta">
-              <a href="{!! $single_project[0]->project_cta['url'] !!}" target="blank">{!! $single_project[0]->project_cta['title']; !!}</a>
+              <a href="{!! $single_project[0]->project_cta['url'] !!}" target="blank">{!! $single_project[0]->project_cta['title'] !!}</a>
             </div>
-            @endif;
+            @endif
           </div>
         </div>
          <div class="col-md-3">
