@@ -40,6 +40,12 @@
         <div class="col-md-8">
           <div class="single-project__content">
             {!! $single_project[0]->project_description !!}
+
+            @if( $single_project[0]->project_cta['url'])
+            <div class="single-project__cta">
+              <a href="{!! $single_project[0]->project_cta['url'] !!}" target="blank">{!! $single_project[0]->project_cta['title']; !!}</a>
+            </div>
+            @endif;
           </div>
         </div>
          <div class="col-md-3">
