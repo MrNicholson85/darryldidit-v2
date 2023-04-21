@@ -13,40 +13,40 @@ $project
 
 $project
   ->addSelect('project_type')
-  ->addChoices([ 'select' => 'Select Type', 'arvr' => 'AR/VR', 'web-development' => 'Web Development', 'art-work' => 'Art Work'])
+  ->addChoices(['select' => 'Select Type', 'arvr' => 'AR/VR', 'web-development' => 'Web Development', 'art-work' => 'Art Work'])
   ->addGroup('project')
-    ->addGroup('project_media', [
-      'wrapper' => [
-        'width' => '50%',
-      ]
-    ])
-      ->addSelect('project_select')
-      ->addChoices([ 'images' => 'Images', 'videos' => 'Videos', ])
-      ->addRepeater('project_images')
-        ->conditional('project_select', '==', 'images')
-        ->addImage('project_image', [
-          'return_format' => 'array',
-          'min' => 1,
-        ])
-      ->endRepeater()
-      ->addOembed('video')
-        ->conditional('project_select', '==', 'videos')
-      ->endGroup()
+  ->addGroup('project_media', [
+    'wrapper' => [
+      'width' => '50%',
+    ]
+  ])
+  ->addSelect('project_select')
+  ->addChoices(['images' => 'Images', 'videos' => 'Videos',])
+  ->addRepeater('project_images')
+  ->conditional('project_select', '==', 'images')
+  ->addImage('project_image', [
+    'return_format' => 'array',
+    'min' => 1,
+  ])
+  ->endRepeater()
+  ->addOembed('video')
+  ->conditional('project_select', '==', 'videos')
+  ->endGroup()
 
-      ->addGroup('project_content', [
-        'wrapper' => [
-          'width' => '50%'
-        ]
-      ])
-        ->addWYSIWYG('project_description', ['label' => 'Project Description'])
-        ->addLink('project_cta', [
-          'return_format' => 'array',
-        ])
-        ->addRepeater('project_items', [
-          'label' => 'Project items'
-        ])
-          ->addText('skills_used', ['label' => 'Skills Used'])
-        ->endRepeater()
-      ->endGroup()
+  ->addGroup('project_content', [
+    'wrapper' => [
+      'width' => '50%'
+    ]
+  ])
+  ->addTextArea('project_description', ['label' => 'Project Description'])
+  ->addLink('project_cta', [
+    'return_format' => 'array',
+  ])
+  ->addRepeater('project_items', [
+    'label' => 'Project items'
+  ])
+  ->addText('skills_used', ['label' => 'Skills Used'])
+  ->endRepeater()
+  ->endGroup()
   ->endGroup();
 return $project;
