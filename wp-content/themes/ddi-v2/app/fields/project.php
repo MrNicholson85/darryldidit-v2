@@ -31,6 +31,9 @@ $project
   ->endRepeater()
   ->addOembed('video')
   ->conditional('project_select', '==', 'videos')
+  ->addColorPicker('project_color', [
+    'label' => 'Project Color'
+  ])
   ->endGroup()
 
   ->addGroup('project_content', [

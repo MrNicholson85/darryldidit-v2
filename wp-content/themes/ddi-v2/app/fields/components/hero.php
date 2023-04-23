@@ -12,6 +12,6 @@ $hero
         'return_format' => 'url',
     ])
     ->addText('hero_title')
-    ->addText('hero_subtitle');
+    ->addTextarea('hero_content');
 
 return $hero;
